@@ -20,6 +20,8 @@
 
 - The project creates reports and takes screenshots of failures.
 
+- Tests were created by using test design techniques (such as boundary values, pairwise and equivalent partitions).
+
 ---
 
 ## Technologies.
@@ -34,12 +36,5 @@ Cypress-mochawesome-reporter 3.8.2
 
  * Before the running execute the command:
  * npm install
- *
  * To generate report execute the command:
  * cypress run or cypress open
-
----
-
-/**
- * Tests were created by using test design techniques (such as boundary values, pairwise and equivalent partitions).
- */
