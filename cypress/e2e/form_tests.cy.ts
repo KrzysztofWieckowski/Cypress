@@ -1,19 +1,6 @@
-/**
- * Before the running execute the command:
- * npm install
- *
- * To generate report execute the command:
- * cypress run
- */
 import {HomePage} from "../support/pages/HomePage";
 import requirementsSubmitForm from "../fixtures/requirementsSubmitForm.json";
 import {faker} from "@faker-js/faker";
-
-/**
- * There is a file with automation tests. There I covered all requirements for Submit forms.
- * Tests were created by using test design techniques(such as boundary values, pairwise and equivalent partitions).
- */
-
 
 const homePage: HomePage = new HomePage();
 
@@ -54,9 +41,7 @@ describe('Testing the submit form on the home page', (): void => {
             homePage.fillInPhoneField(minValidValuePhone);
             homePage.fillInSubjectField(minValidValueSubject);
             homePage.fillInMessageInputArea(minValidValueMessage);
-
             homePage.submitTheForm();
-
             homePage.checkSuccessSubmitFromMessage(minValidValueName, minValidValueSubject);
         })
 
@@ -69,21 +54,17 @@ describe('Testing the submit form on the home page', (): void => {
             homePage.fillInPhoneField(maxValidSizePhone);
             homePage.fillInSubjectField(maxValidSizeSubject);
             homePage.fillInMessageInputArea(maxValidSizeMessage);
-
             homePage.submitTheForm();
-
             homePage.checkSuccessSubmitFromMessage(maxValidSizeName, maxValidSizeSubject);
         })
 
         it('Submit the empty form', (): void => {
             homePage.submitTheForm();
-
             homePage.checkAlertForTheEmptyField('name');
             homePage.checkAlertForTheEmptyField('message');
             homePage.checkAlertForTheEmptyField('phone');
             homePage.checkAlertForTheEmptyField('subject');
             homePage.checkAlertForTheEmptyField('email');
-
             homePage.checkAlertAboutWrongAmountOfCharactersForField('message');
             homePage.checkAlertAboutWrongAmountOfCharactersForField('phone');
             homePage.checkAlertAboutWrongAmountOfCharactersForField('subject');
@@ -100,11 +81,8 @@ describe('Testing the submit form on the home page', (): void => {
                 homePage.fillInNameField(minValidValueName);
                 homePage.fillInEmailField(minValidValueEmail);
                 homePage.fillInPhoneField(minValidValuePhone);
-
                 homePage.fillInSubjectField(valueOutOfRequiredSize);
-
                 homePage.fillInMessageInputArea(minValidValueMessage);
-
                 homePage.submitTheForm();
                 homePage.checkAlertAboutWrongAmountOfCharactersForField('subject');
             })
@@ -114,12 +92,9 @@ describe('Testing the submit form on the home page', (): void => {
 
                 homePage.fillInNameField(minValidValueName);
                 homePage.fillInEmailField(minValidValueEmail);
-
                 homePage.fillInPhoneField(valueOutOfRequiredSize);
-
                 homePage.fillInSubjectField(minValidValueSubject);
                 homePage.fillInMessageInputArea(minValidValueMessage);
-
                 homePage.submitTheForm();
                 homePage.checkAlertAboutWrongAmountOfCharactersForField('phone');
             })
@@ -131,9 +106,7 @@ describe('Testing the submit form on the home page', (): void => {
                 homePage.fillInEmailField(minValidValueEmail);
                 homePage.fillInPhoneField(minValidValuePhone);
                 homePage.fillInSubjectField(minValidValueSubject);
-
                 homePage.fillInMessageInputArea(valueOutOfRequiredSize);
-
                 homePage.submitTheForm();
                 homePage.checkAlertAboutWrongAmountOfCharactersForField('message');
             })
@@ -147,11 +120,8 @@ describe('Testing the submit form on the home page', (): void => {
                 homePage.fillInNameField(minValidValueName);
                 homePage.fillInEmailField(minValidValueEmail);
                 homePage.fillInPhoneField(minValidValuePhone);
-
                 homePage.fillInSubjectField(valueOutOfRequiredSize);
-
                 homePage.fillInMessageInputArea(minValidValueMessage);
-
                 homePage.submitTheForm();
                 homePage.checkAlertAboutWrongAmountOfCharactersForField('subject');
             })
@@ -161,12 +131,9 @@ describe('Testing the submit form on the home page', (): void => {
 
                 homePage.fillInNameField(minValidValueName);
                 homePage.fillInEmailField(minValidValueEmail);
-
                 homePage.fillInPhoneField(valueOutOfRequiredSize);
-
                 homePage.fillInSubjectField(minValidValueSubject);
                 homePage.fillInMessageInputArea(minValidValueMessage);
-
                 homePage.submitTheForm();
                 homePage.checkAlertAboutWrongAmountOfCharactersForField('phone');
             })
@@ -178,9 +145,7 @@ describe('Testing the submit form on the home page', (): void => {
                 homePage.fillInEmailField(minValidValueEmail);
                 homePage.fillInPhoneField(minValidValuePhone);
                 homePage.fillInSubjectField(minValidValueSubject);
-
                 homePage.fillInMessageInputArea(valueOutOfRequiredSize);
-
                 homePage.submitTheForm();
                 homePage.checkAlertAboutWrongAmountOfCharactersForField('message');
             })
