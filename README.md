@@ -30,15 +30,15 @@ Typescript 5.4.3
 Cypress-mochawesome-reporter 3.8.2
 
 
-## Cypress
+## How to run?
 
-/**
  * Before the running execute the command:
  * npm install
  *
  * To generate report execute the command:
  * cypress run or cypress open
- */
+
+---
 
 /**
  * Tests were created by using test design techniques (such as boundary values, pairwise and equivalent partitions).
