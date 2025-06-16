@@ -35,6 +35,6 @@ Cypress-mochawesome-reporter 3.8.2
 ## How to run?
 
  * Before the running execute the command:
- * npm install
+  npm install
  * To generate report execute the command:
- * cypress run or cypress open
+  cypress run or cypress open
